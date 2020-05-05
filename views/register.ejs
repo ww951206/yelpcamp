@@ -1,0 +1,23 @@
+<%- include("./partials/header") %>
+
+<div class="container">
+	<%if(error&& error.length>0){ %>
+		<div class="alert alert-danger">
+			<%= error %>
+		</div>
+	<%}else if(success&& success.length>0){%>
+		<div class="alert alert-success">
+			<%= success %>
+		</div>
+	<%}%>
+</div>
+<h1>Sign Up </h1>
+
+<form action="/register" method="POST">
+	<input type="text" name="username" placeholder="username">
+	<input type="password" name="password" placeholder="password">
+	<button>Sign Up </button>
+</form>
+
+
+<%- include("./partials/footer") %>
